@@ -1,0 +1,8 @@
+lerna-debug.log
+node_modules
+/packages/*/node_modules/
+/packages/*/tsconfig.tsbuildinfo
+.DS_Store
+yarn.lock
+/packages/*/es/
+/packages/*/dist/

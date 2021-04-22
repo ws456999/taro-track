@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["ES6"],
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "declaration": true,
+    "composite": true,
+    "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": false,
+    "resolveJsonModule": true,
+    "rootDir": "src",
+    "outDir": "dist",
+  },
+  "exclude": [
+    "**/es/**/*",
+    "**/lib/**/*",
+    "node_modules",
+    "dist"
+  ]
+}

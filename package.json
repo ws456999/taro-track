@@ -1,0 +1,33 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-plugin-react": "^7.21.4",
+    "lerna": "^3.13.0",
+    "lint-staged": "^10.4.2",
+    "husky": "^4.3.0",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "test": "lerna exec --stream -- npm run test",
+    "lint": "./node_modules/.bin/eslint './packages/**/src/**/*.ts'",
+    "lint:fix": "./node_modules/.bin/eslint './packages/**/src/**/*.{ts,tsx,js}' --fix --quiet",
+    "prepub:patch": "npm run test && npx lerna version patch --no-push --yes",
+    "pub:patch": "npx lerna publish from-git --yes",
+    "postpub:patch": "git push --follow-tags origin"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint:fix",
+      "prettier --write"
+    ]
+  }
+}

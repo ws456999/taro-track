@@ -1,0 +1,42 @@
+{
+  "name": "taro-track",
+  "version": "1.0.0",
+  "description": "小程序埋点方案",
+  "author": "ws456999",
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "es": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git"
+  },
+  "engines": {
+    "node": ">= 10.14.2"
+  },
+  "scripts": {
+    "test": "echo \"skip taro-track test\"",
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@tarojs/components": "^3.0.14",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.52",
+    "@types/wechat-miniprogram": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@tarojs/taro": "3.0.10",
+    "@tarojs/components": "^3.0.14",
+    "react": "^16.14.0"
+  }
+}
